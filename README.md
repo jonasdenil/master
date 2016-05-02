@@ -1,1 +1,1 @@
-# master
+# Masterproject: The Connected Self
