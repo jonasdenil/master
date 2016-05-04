@@ -2,6 +2,10 @@
 <meta charset="utf-8">
 <style>
 
+body {
+	background-color: #04171F;
+}
+
 .node circle {
   fill: #fff;
   stroke: steelblue;
@@ -9,13 +13,29 @@
 }
 
 .node {
-  font: 10px sans-serif;
+  font: 14px Hanken, sans-serif;
+  font-weight: light;
 }
 
 .link {
   fill: none;
-  stroke: #ccc;
+  stroke: #236030;
   stroke-width: 1.5px;
+}
+
+text {
+	fill: #fff;
+}
+
+@font-face {
+    font-family: Hanken;
+    src: url(font/HankenSans-Regular.otf);
+    font-weight: regular;
+}
+@font-face {
+    font-family: Hanken;
+    src: url(font/HankenSans-Light.otf);
+    font-weight: light;
 }
 
 </style>
@@ -23,7 +43,7 @@
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
 
-var diameter = 960;
+var diameter = 1200;
 
 var tree = d3.layout.tree()
     .size([360, diameter / 2 - 120])
@@ -38,7 +58,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
-d3.json("flare.json", function(error, root) {
+d3.json("test.json", function(error, root) {
   if (error) throw error;
 
   var nodes = tree.nodes(root),
