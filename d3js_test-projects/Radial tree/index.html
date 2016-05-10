@@ -43,7 +43,9 @@ text {
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
 
-var diameter = 3000;
+var w = window.innerWidth
+
+var diameter = w;
 
 var tree = d3.layout.tree()
     .size([360, diameter / 2 - 120])
