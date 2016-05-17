@@ -7,13 +7,13 @@ body {
 }
 
 .node circle {
-  fill: #fff;
+  fill: #236030;
   stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke-width: .5px;
 }
 
 .node {
-  font: 12px Hanken, sans-serif;
+  font: 10px Hanken, sans-serif;
   font-weight: light;
 }
 
@@ -45,7 +45,7 @@ text {
 
 var w = window.innerWidth
 
-var diameter = w;
+var diameter = 4000;
 
 var tree = d3.layout.tree()
     .size([360, diameter / 2 - 120])
